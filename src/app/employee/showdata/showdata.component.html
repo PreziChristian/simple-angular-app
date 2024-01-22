@@ -1,0 +1,51 @@
+<br /><button
+  mat-raised-button
+  matTooltip="go to homepage"
+  aria-label="Button that displays a tooltip when focused or hovered over"
+  [routerLink]="['/home']"
+>
+  Go to HomePage
+</button>
+<br /><br />
+
+<table *ngIf="users">
+  <tr>
+    <td>employeeId</td>
+    <td>employeeName</td>
+    <td>employeeAddress</td>
+    <td>employeeAge</td>
+    <td>employeeSalary</td>
+    <td>employeeGender</td>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>
+      {{ user.Id }}
+    </td>
+    <td>
+      {{ user.EmployeeName }}
+    </td>
+    <td>
+      {{ user.EmployeeAddress }}
+    </td>
+    <td>
+      {{ user.EmployeeAge }}
+    </td>
+    <td>
+      {{ user.EmployeeSalary }}
+    </td>
+    <td>
+      {{ user.EmployeeGender }}
+    </td>
+    <td>
+      <button [routerLink]="['/update', user.Id]" mat-raised-button matTooltip="Update {{user.Id}} Id">Update</button>
+    </td>
+    <td>
+      <button (click)="deleteEmployee(user.Id)" mat-raised-button matTooltip="Delete {{user.Id}} Id">Delete</button>
+    </td>
+  </tr>
+</table>
+<mat-paginator [length]="100"
+[pageSize]="10"
+[pageSizeOptions]="[5, 10, 25, 100]"
+aria-label="Select page"></mat-paginator>
+

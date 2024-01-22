@@ -1,0 +1,14 @@
+<form [formGroup]="logindata" (ngSubmit)="onSubmit()" >
+    <label>User Name</label>
+    <br />
+    <input type="text" name="userName" formControlName="userName" />
+    <br />
+  
+    <label>Password</label>
+    <br />
+    <input type="number" name="password" formControlName="password" />
+  
+    <br /><br />
+    <input type="submit" value="login" />
+  </form>
+  

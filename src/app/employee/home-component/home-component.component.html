@@ -1,0 +1,9 @@
+<h1>Home page</h1>
+<ng-container *ngIf="token">
+  <button (click)="logout()" >Logout</button>
+  <br /><br />
+  <button [routerLink]="['/home/view']">Show Employee Data</button>
+  <br /><br />
+  <button [routerLink]="['/insert']">Insert data</button>
+</ng-container>
+<!-- *ngIf="router.url.includes('/')" -->

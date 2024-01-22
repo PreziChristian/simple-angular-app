@@ -1,0 +1,41 @@
+<button [routerLink]="['/home']">Go to HomePage</button> <br /><br />
+<div>
+  <h1>Insert Employee Data</h1>
+  <form [formGroup]="insertvalue" (ngSubmit)="onSubmit()">
+    <label for="employeeName">Employee Name</label>
+    <br />
+    <input type="text" name="employeeName" formControlName="EmployeeName" />
+    <br />
+
+    <label for="employeeAge">Employee Age</label>
+    <br />
+    <input type="number" name="employeeAge" formControlName="EmployeeAge" />
+
+    <br />
+
+    <label for="employeeGender">Employee Gender</label>
+    <br />
+    <input
+      type="text"
+      name="employeeGender"
+      formControlName="EmployeeGender"
+    /><br />
+    <label for="employeeAddress">Employee Address</label>
+    <br />
+    <input
+      type="text"
+      name="employeeAddress"
+      formControlName="EmployeeAddress"
+    />
+    <br />
+    <label for="employeeSalary">Employee Salary</label>
+    <br />
+    <input
+      type="number"
+      name="employeeSalary"
+      formControlName="EmployeeSalary"
+    />
+    <br /><br />
+    <input type="submit" value="submit" />
+  </form>
+</div>
